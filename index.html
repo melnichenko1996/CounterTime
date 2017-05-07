@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>CounterTime</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/date.js"></script>
+    <script type="text/javascript" src="js/myScript.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="welcome">
+        <h1>
+        	CounterTime<i class="glyphicon glyphicon-time"></i>
+        </h1>
+    </div>
+    <div id="mainWindow" style="display:none" >
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h4 id="nowDate" class="text-center"></h4></div>
+            <!-- Table -->
+            <table class="table">
+                <tr>
+                    <th style="width:25%">
+                        <h4 class="text-left"><i class="glyphicon glyphicon-time"></i>CounterTime</h4></th>
+                    <th style="width:50%">
+                        <h4 class="text-center" id="outTime"></h4>
+                    </th>
+                    <th style="width:25%">
+                        <h4 class="text-right">Автор <a href="https://vk.com/melnichenko_fcdk" title="Перейти на сторінку ВКонтакте" target="_blank">"Мельниченко Євген"</a></h4></th>
+                </tr>
+            </table>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!--Весна-->
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center" id="springDate"></h3>
+                            <div class="progress">
+                                <div id="progresOne" class="progress-bar progress-bar-success progress-bar-striped active">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div id="accordion-1" class="panel-group">
+                                <!--Аккордеон 1-->
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+								<a href="#collapse-1" data-parent="#accordion-1" data-toggle="collapse">8 березня</a>
+							</h4>
+                                    </div>
+                                    <div id="collapse-1" class="panel-collapse collapse">
+                                        <div class="panel-body" style="text-align: center">
+                                            <!--Подія в зазначену дату-->
+                                            <div id="collapse-1-One"></div>
+                                            <div id="collapse-1-Two" style="display:inline;"></div>
+                                            <div class="timeEvent" style="display:inline;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Аккордеон 2-->
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+								<a href="#collapse-2" data-parent="#accordion-1" data-toggle="collapse">Великдень</a>
+							</h4>
+                                    </div>
+                                    <div id="collapse-2" class="panel-collapse collapse">
+                                        <div class="panel-body" style="text-align: center">
+                                            <div id="collapse-2-One"></div>
+                                            <div id="collapse-2-Two" style="display:inline;"></div>
+                                            <div class="timeEvent" style="display:inline;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Аккордеон 3-->
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+								<a href="#collapse-3" data-parent="#accordion-1" data-toggle="collapse">Свято весни і праці</a>
+							</h4>
+                                    </div>
+                                    <div id="collapse-3" class="panel-collapse collapse">
+                                        <div class="panel-body" style="text-align: center">
+                                            <div id="collapse-3-One"></div>
+                                            <div id="collapse-3-Two" style="display:inline;"></div>
+                                            <div class="timeEvent" style="display:inline;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Аккордеон 4-->
+                                <div class="panel panel-success">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+								<a href="#collapse-4" data-parent="#accordion-1" data-toggle="collapse">День перемоги</a>
+							</h4>
+                                    </div>
+                                    <div id="collapse-4" class="panel-collapse collapse">
+                                        <div class="panel-body" style="text-align: center">
+                                            <div id="collapse-4-One"></div>
+                                            <div id="collapse-4-Two" style="display:inline;"></div>
+                                            <div class="timeEvent" style="display:inline;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!--Літо-->
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center" id="summerDate"></h3>
+                            <div class="progress">
+                                <div id="progresTwo" class="progress-bar progress-bar-warning progress-bar-striped active">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div id="accordion-2" class="panel-group">
+                                <!--Аккордеон 5-->
+                                <div class="panel panel-warning">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+								<a href="#collapse-5" data-parent="#accordion-2" data-toggle="collapse">Трійця</a>
+							</h4>
+                                    </div>
+                                    <div id="collapse-5" class="panel-collapse collapse">
+
+                                        <div class="panel-body" style="text-align: center">
+                                            <div id="collapse-5-One"></div>
+                                            <div id="collapse-5-Two" style="display:inline;"></div>
+                                            <div class="timeEvent" style="display:inline;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Аккордеон 6-->
+                                <div class="panel panel-warning">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+								<a href="#collapse-6" data-parent="#accordion-2" data-toggle="collapse">День Конституції України</a>
+							</h4>
+                                    </div>
+                                    <div id="collapse-6" class="panel-collapse collapse">
+                                        <div class="panel-body" style="text-align: center">
+                                            <div id="collapse-6-One"></div>
+                                            <div id="collapse-6-Two" style="display:inline;"></div>
+                                            <div class="timeEvent" style="display:inline;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Аккордеон 7-->
+                                <div class="panel panel-warning">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+								<a href="#collapse-7" data-parent="#accordion-2" data-toggle="collapse">Івана Купала</a>
+							</h4>
+                                    </div>
+                                    <div id="collapse-7" class="panel-collapse collapse">
+                                        <div class="panel-body" style="text-align: center">
+                                            <div id="collapse-7-One"></div>
+                                            <div id="collapse-7-Two" style="display:inline;"></div>
+                                            <div class="timeEvent" style="display:inline;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Аккордеон 8-->
+                                <div class="panel panel-warning">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+								<a href="#collapse-8" data-parent="#accordion-2" data-toggle="collapse">День Незалежності України</a>
+							</h4>
+                                    </div>
+                                    <div id="collapse-8" class="panel-collapse collapse">
+
+                                        <div class="panel-body" style="text-align: center">
+                                            <div id="collapse-8-One"></div>
+                                            <div id="collapse-8-Two" style="display:inline;"></div>
+                                            <div class="timeEvent" style="display:inline;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!--Осінь-->
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center" id="autumnDate"></h3>
+                            <div class="progress">
+                                <div id="progresThree" class="progress-bar progress-bar-danger progress-bar-striped active">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div id="accordion-3" class="panel-group">
+                                <!--Аккордеон 9-->
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+								<a href="#collapse-9" data-parent="#accordion-3" data-toggle="collapse">День Знань</a>
+							</h4>
+                                    </div>
+                                    <div id="collapse-9" class="panel-collapse collapse">
+                                        <div class="panel-body" style="text-align: center">
+                                            <div id="collapse-9-One"></div>
+                                            <div id="collapse-9-Two" style="display:inline;"></div>
+                                            <div class="timeEvent" style="display:inline;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Аккордеон 10-->
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+								<a href="#collapse-10" data-parent="#accordion-3" data-toggle="collapse">День захисника України</a>
+							</h4>
+                                    </div>
+                                    <div id="collapse-10" class="panel-collapse collapse">
+                                        <div class="panel-body" style="text-align: center">
+                                            <div id="collapse-10-One"></div>
+                                            <div id="collapse-10-Two" style="display:inline;"></div>
+                                            <div class="timeEvent" style="display:inline;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Аккордеон 11-->
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+								<a href="#collapse-11" data-parent="#accordion-3" data-toggle="collapse">Міжнародний день студентів</a>
+							</h4>
+                                    </div>
+                                    <div id="collapse-11" class="panel-collapse collapse">
+                                        <div class="panel-body" style="text-align: center">
+                                            <div id="collapse-11-One"></div>
+                                            <div id="collapse-11-Two" style="display:inline;"></div>
+                                            <div class="timeEvent" style="display:inline;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Аккордеон 12-->
+                                <div class="panel panel-danger">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+								<a href="#collapse-12" data-parent="#accordion-3" data-toggle="collapse">День телебачення</a>
+							</h4>
+                                    </div>
+                                    <div id="collapse-12" class="panel-collapse collapse">
+                                        <div class="panel-body" style="text-align: center">
+                                            <div id="collapse-12-One"></div>
+                                            <div id="collapse-12-Two" style="display:inline;"></div>
+                                            <div class="timeEvent" style="display:inline;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!--Зима-->
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center" id="winterDate"></h3>
+                            <div class="progress">
+                                <div id="progresFour" class="progress-bar progress-bar-info progress-bar-striped active">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div id="accordion-4" class="panel-group">
+                                <!--Аккордеон 13-->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+								<a href="#collapse-13" data-parent="#accordion-4" data-toggle="collapse">День Збройних сил України</a>
+							</h4>
+                                    </div>
+                                    <div id="collapse-13" class="panel-collapse collapse">
+
+                                        <div class="panel-body" style="text-align: center">
+                                            <div id="collapse-13-One"></div>
+                                            <div id="collapse-13-Two" style="display:inline;"></div>
+                                            <div class="timeEvent" style="display:inline;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Аккордеон 14-->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+								<a href="#collapse-14" data-parent="#accordion-4" data-toggle="collapse">День святого Миколая</a>
+							</h4>
+                                    </div>
+                                    <div id="collapse-14" class="panel-collapse collapse">
+                                        <div class="panel-body" style="text-align: center">
+                                            <div id="collapse-14-One"></div>
+                                            <div id="collapse-14-Two" style="display:inline;"></div>
+                                            <div class="timeEvent" style="display:inline;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Аккордеон 15-->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+								<a href="#collapse-15" data-parent="#accordion-4" data-toggle="collapse">Новий 2018 рік</a>
+							</h4>
+                                    </div>
+                                    <div id="collapse-15" class="panel-collapse collapse">
+                                        <div class="panel-body" style="text-align: center">
+                                            <div id="collapse-15-One"></div>
+                                            <div id="collapse-15-Two" style="display:inline;"></div>
+                                            <div class="timeEvent" style="display:inline;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Аккордеон 16-->
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+								<a href="#collapse-16" data-parent="#accordion-4" data-toggle="collapse">Різдво Христове</a>
+							</h4>
+                                    </div>
+                                    <div id="collapse-16" class="panel-collapse collapse">
+                                        <div class="panel-body" style="text-align: center">
+                                            <div id="collapse-16-One"></div>
+                                            <div id="collapse-16-Two" style="display:inline;"></div>
+                                            <div class="timeEvent" style="display:inline;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>
