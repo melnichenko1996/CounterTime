@@ -24,20 +24,20 @@ $(document).ready(function() {
     var springIdThree = new Date(2018, 4, 1, 0, 0, 0);
     var springIdFour = new Date(2018, 4, 9, 0, 0, 0);
 
-    var summerIdOne = new Date(2017, 5, 4, 0, 0, 0);
-    var summerIdTwo = new Date(2017, 5, 28, 0, 0, 0);
-    var summerIdThree = new Date(2017, 6, 7, 0, 0, 0);
-    var summerIdFour = new Date(2017, 7, 24, 0, 0, 0);
+    var summerIdOne = new Date(2018, 5, 4, 0, 0, 0);
+    var summerIdTwo = new Date(2018, 5, 28, 0, 0, 0);
+    var summerIdThree = new Date(2018, 6, 7, 0, 0, 0);
+    var summerIdFour = new Date(2018, 7, 24, 0, 0, 0);
 
-    var autumnIdOne = new Date(2017, 8, 1, 0, 0, 0);
-    var autumnIdTwo = new Date(2017, 9, 14, 0, 0, 0);
-    var autumnIdThree = new Date(2017, 10, 17, 0, 0, 0);
-    var autumnIdFour = new Date(2017, 10, 21, 0, 0, 0);
+    var autumnIdOne = new Date(2018, 8, 1, 0, 0, 0);
+    var autumnIdTwo = new Date(2018, 9, 14, 0, 0, 0);
+    var autumnIdThree = new Date(2018, 10, 17, 0, 0, 0);
+    var autumnIdFour = new Date(2018, 10, 21, 0, 0, 0);
 
-    var winterIdOne = new Date(2017, 11, 6, 0, 0, 0);
-    var winterIdTwo = new Date(2017, 11, 19, 0, 0, 0);
-    var winterIdThree = new Date(2018, 0, 1, 0, 0, 0);
-    var winterIdFour = new Date(2018, 0, 7, 0, 0, 0);
+    var winterIdOne = new Date(2018, 11, 6, 0, 0, 0);
+    var winterIdTwo = new Date(2018, 11, 19, 0, 0, 0);
+    var winterIdThree = new Date(2019, 0, 1, 0, 0, 0);
+    var winterIdFour = new Date(2019, 0, 7, 0, 0, 0);
 
 
     function season(date, One, Two, textInDiv) {

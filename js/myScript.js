@@ -55,9 +55,9 @@ function outTime () {
 	
 //обект типа Date(год,месяць, день, час, секунда);
 var spring = new Date(2018,2,1,0,0,0);
-var summer = new Date(2017,5,1,0,0,0);
-var autumn = new Date(2017,8,1,0,0,0);
-var winter = new Date(2017,11,1,0,0,0);
+var summer = new Date(2018,5,1,0,0,0);
+var autumn = new Date(2018,8,1,0,0,0);
+var winter = new Date(2018,11,1,0,0,0);
 
 function daysToEnd (date,div,progres,textInDiv){
 	var now = new Date();
